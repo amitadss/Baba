@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BDG WIN Official</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:linear-gradient(-45deg,#120024,#240046,#3c096c,#5a189a);
+background-size:400% 400%;
+animation:bgMove 10s ease infinite;
+color:#fff;
+text-align:center;
+padding:20px;
+overflow-x:hidden;
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* Warning Bar */
+.warning{
+background:#ff0033;
+color:#fff;
+padding:10px 0;
+font-weight:bold;
+font-size:14px;
+overflow:hidden;
+white-space:nowrap;
+}
+
+.warning span{
+display:inline-block;
+padding-left:100%;
+animation:scrollText 12s linear infinite;
+}
+
+@keyframes scrollText{
+0%{transform:translateX(0);}
+100%{transform:translateX(-100%);}
+}
+
+/* Logo */
+.logo{
+width:150px;
+height:150px;
+border-radius:50%;
+margin:40px auto 20px;
+background:#0a0a0a;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+font-size:26px;
+letter-spacing:2px;
+
+color:#d000ff;
+
+box-shadow:
+0 0 10px #d000ff,
+0 0 25px #b5179e,
+0 0 45px #7209b7,
+inset 0 0 25px #b5179e;
+
+border:2px solid #d000ff;
+animation:logoGlow 2s infinite alternate;
+}
+
+@keyframes logoGlow{
+from{box-shadow:0 0 10px #d000ff,0 0 20px #b5179e;}
+to{box-shadow:0 0 25px #d000ff,0 0 60px #7209b7;}
+}
+
+/* Heading */
+h1{
+margin-top:10px;
+font-size:34px;
+letter-spacing:2px;
+color:#e0aaff;
+text-shadow:0 0 10px #c77dff;
+}
+
+.sub{
+margin-top:10px;
+color:#ddd;
+font-size:15px;
+}
+
+/* Stats */
+.stats{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:12px;
+margin:30px 0;
+flex-wrap:nowrap;
+}
+
+.box{
+background:#1a0033;
+padding:15px 18px;
+border-radius:12px;
+min-width:95px;
+box-shadow:0 0 12px rgba(200,0,255,0.5);
+}
+
+.box h2{
+color:#c77dff;
+font-size:20px;
+}
+
+.box p{
+font-size:11px;
+color:#ccc;
+margin-top:3px;
+}
+
+/* Join Button */
+.join-btn{
+display:block;
+width:90%;
+max-width:420px;
+margin:20px auto;
+padding:18px;
+border-radius:40px;
+background:linear-gradient(90deg,#7209b7,#d000ff);
+color:#fff;
+font-size:20px;
+font-weight:bold;
+text-decoration:none;
+box-shadow:0 0 25px rgba(208,0,255,0.8);
+transition:0.3s;
+}
+
+.join-btn:hover{
+transform:scale(1.05);
+box-shadow:0 0 40px #d000ff;
+}
+
+/* Countdown */
+.timer{
+margin-top:30px;
+font-size:14px;
+color:#ccc;
+}
+
+#countdown{
+font-size:42px;
+color:#d000ff;
+margin-top:10px;
+font-weight:bold;
+text-shadow:0 0 15px #d000ff;
+}
+</style>
+</head>
+
+<body>
+
+<div class="warning">
+<span>
+⚠️ WARNING: OFFER ENDING SOON | 💎 95% ACCURACY SIGNAL | JOIN FAST 🚀
+</span>
+</div>
+
+<div class="logo">
+BDG WIN
+</div>
+
+<h1>BDG WIN OFFICIAL</h1>
+
+<p class="sub">
+Join the fastest growing trading community and start making profit.
+</p>
+
+<div class="stats">
+
+<div class="box">
+<h2>10K+</h2>
+<p>TRADERS</p>
+</div>
+
+<div class="box">
+<h2>95%</h2>
+<p>ACCURACY</p>
+</div>
+
+<div class="box">
+<h2>VIP</h2>
+<p>STATUS</p>
+</div>
+
+</div>
+
+<a class="join-btn" href="https://t.me/+duzbq0NJfIszZmU1" target="_blank">
+JOIN TELEGRAM
+</a>
+
+<div class="timer">
+LINK EXPIRES IN:
+<div id="countdown">01:00</div>
+</div>
+
+<script>
+let time = 60;
+
+let countdown = document.getElementById("countdown");
+
+let timer = setInterval(()=>{
+let minutes = Math.floor(time/60);
+let seconds = time%60;
+
+countdown.innerHTML =
+String(minutes).padStart(2,'0') + ":" +
+String(seconds).padStart(2,'0');
+
+time--;
+
+if(time < 0){
+clearInterval(timer);
+countdown.innerHTML = "EXPIRED";
+}
+},1000);
+</script>
+
+</body>
+</html>
