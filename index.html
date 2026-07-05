@@ -1,659 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Amit Ads Agency — Hacking Prediction Telegram Channel</title>
-    <meta name="description" content="Join Harshit Bhai's Telegram channel for exclusive content, live sessions, free gift codes and 24/7 community support. Rated 4.99/5." />
-    <meta property="og:title" content="Harshit Bhai — Hacking Prediction Telegram Channel" />
-    <meta property="og:description" content="Exclusive content, real talk, and a community that stays connected. Join the movement." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="canonical" href="/" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Official Prediction Club</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* ── Reset & base ── */
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            background: #0b0a0a;
-            color: #f5f3f0;
+            background: #060713;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 16px;
+            overflow-x: hidden;
         }
 
-        .page {
-            max-width: 720px;
+        /* Neon Background Elements */
+        .neon-sphere {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(113, 23, 234, 0.35) 0%, rgba(0,0,0,0) 70%);
+            top: -50px;
+            right: -100px;
+            z-index: 1;
+        }
+
+        .neon-sphere-2 {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(234, 19, 142, 0.25) 0%, rgba(0,0,0,0) 70%);
+            bottom: -50px;
+            left: -100px;
+            z-index: 1;
+        }
+
+        .wrapper {
             width: 100%;
-            margin: 0 auto;
+            max-width: 440px;
+            background: linear-gradient(145deg, rgba(15, 18, 36, 0.95), rgba(9, 11, 23, 0.95));
+            padding: 35px 25px;
+            border-radius: 30px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(113, 23, 234, 0.2);
+            text-align: center;
+            z-index: 2;
             position: relative;
+            margin: 15px;
         }
 
-        /* ── Topbar ── */
-        .topbar {
-            background: #1a1a1a;
-            border-radius: 100px;
-            padding: 10px 20px;
-            text-align: center;
-            font-size: 13px;
-            font-weight: 500;
-            letter-spacing: 0.3px;
-            color: #b3b3b3;
-            border: 1px solid #2a2a2a;
-            margin-bottom: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .topbar-dot {
-            width: 6px;
-            height: 6px;
+        /* Logo Area */
+        .logo-container {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 20px auto;
             border-radius: 50%;
-            background: #e63946;
-            display: inline-block;
-            animation: pulse-dot 1.8s ease-in-out infinite;
-            flex-shrink: 0;
+            padding: 3px;
+            background: linear-gradient(45deg, #ff007f, #7117ea, #00f2fe);
+            box-shadow: 0 0 20px rgba(113, 23, 234, 0.6);
         }
 
-        @keyframes pulse-dot {
-            0%,
-            100% {
-                opacity: 0.3;
-                transform: scale(0.9);
-            }
-            50% {
-                opacity: 1;
-                transform: scale(1.2);
-            }
-        }
-
-        .topbar-link {
-            color: #e63946;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.2s ease, text-shadow 0.2s ease;
-        }
-
-        .topbar-link:hover {
-            color: #ff6b7a;
-            text-shadow: 0 0 20px rgba(230, 57, 70, 0.3);
-        }
-
-        .topbar-text {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        /* ── Hero ── */
-        .hero {
-            text-align: center;
-            padding: 20px 0 12px;
-        }
-
-        .hero-avatar {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin: 0 auto 20px;
-            border: 3px solid #e63946;
-            box-shadow: 0 0 40px rgba(230, 57, 70, 0.25);
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        .hero-avatar-img {
+        .logo-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            display: block;
+            border-radius: 50%;
+            background: #060713;
         }
 
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(230, 57, 70, 0.15);
-            border: 1px solid rgba(230, 57, 70, 0.3);
-            padding: 6px 18px 6px 14px;
-            border-radius: 100px;
-            font-size: 13px;
-            font-weight: 600;
-            color: #e63946;
-            letter-spacing: 0.5px;
-            margin-bottom: 18px;
-            text-transform: uppercase;
-        }
-
-        .hero-badge-icon {
-            width: 18px;
-            height: 18px;
-        }
-
-        .hero-heading {
-            font-size: clamp(2.4rem, 10vw, 4.2rem);
-            font-weight: 900;
-            line-height: 1.1;
-            letter-spacing: -0.02em;
+        /* Meta Safe Heading */
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: 1px;
             margin-bottom: 12px;
+            text-transform: uppercase;
+            background: linear-gradient(90deg, #ffffff, #a0aec0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .hero-heading-line {
-            display: block;
+        .tagline {
+            font-size: 14px;
+            color: #00f2fe;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
         }
 
-        .hero-heading-black {
-            color: #f5f3f0;
+        /* Color Strips Graphics */
+        .game-preview {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 20px 15px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
         }
 
-        .hero-heading-red {
-            color: #e63946;
-            text-shadow: 0 0 40px rgba(230, 57, 70, 0.25);
+        .color-pill {
+            flex: 1;
+            margin: 0 6px;
+            padding: 12px 0;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
 
-        .hero-subtitle {
-            font-size: 1.05rem;
-            color: #a8a6a2;
-            max-width: 440px;
-            margin: 0 auto 28px;
-            font-weight: 400;
-            line-height: 1.6;
+        .pill-red { background: #ff0844; border: 1px solid #ff6b8b; text-shadow: 0 0 8px rgba(255,8,68,0.8); }
+        .pill-violet { background: #7117ea; border: 1px solid #b684ff; text-shadow: 0 0 8px rgba(113,23,234,0.8); }
+        .pill-green { background: #11998e; border: 1px solid #38ef7d; text-shadow: 0 0 8px rgba(17,153,142,0.8); }
+
+        /* Trust Points */
+        .features-list {
+            text-align: left;
+            margin-bottom: 30px;
+            background: rgba(113, 23, 234, 0.05);
+            padding: 15px 20px;
+            border-radius: 15px;
+            border-left: 4px solid #7117ea;
         }
 
-        /* ── CTA Button ── */
-        .cta-btn {
-            display: inline-flex;
+        .feature-item {
+            font-size: 13px;
+            color: #cbd5e0;
+            margin: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feature-item span { color: #38ef7d; font-weight: bold; }
+
+        /* Powerful Telegram CTA */
+        .btn-join {
+            display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
-            padding: 16px 34px;
-            border-radius: 60px;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            font-size: 1rem;
+            background: linear-gradient(90deg, #0088cc, #00bfff);
+            color: #ffffff;
             text-decoration: none;
-            transition: all 0.25s ease;
-            border: none;
-            cursor: pointer;
-        }
-
-        .cta-btn-primary {
-            background: linear-gradient(135deg, #e63946, #c62833);
-            color: #fff;
-            box-shadow: 0 8px 32px rgba(230, 57, 70, 0.35);
-        }
-
-        .cta-btn-primary:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 12px 44px rgba(230, 57, 70, 0.5);
-        }
-
-        .cta-btn-primary:active {
-            transform: scale(0.97);
-        }
-
-        .cta-btn-icon {
-            width: 20px;
-            height: 20px;
-            flex-shrink: 0;
-        }
-
-        .cta-btn-text {
-            letter-spacing: 0.3px;
-        }
-
-        /* ── Countdown ── */
-        .countdown {
-            background: #141414;
+            padding: 16px;
             border-radius: 16px;
-            padding: 16px 20px;
-            margin: 28px 0 20px;
-            border: 1px solid #262626;
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-
-        .countdown-icon {
-            color: #e63946;
-            flex-shrink: 0;
-        }
-
-        .countdown-icon svg {
-            width: 26px;
-            height: 26px;
-        }
-
-        .countdown-body {
-            flex: 1;
-            min-width: 0;
-        }
-
-        .countdown-text {
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: #d0ceca;
-            margin-bottom: 6px;
-        }
-
-        .countdown-bar {
-            width: 100%;
-            height: 4px;
-            background: #2a2a2a;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-
-        .countdown-bar-fill {
-            height: 100%;
-            width: 0%;
-            background: linear-gradient(90deg, #e63946, #ff6b7a);
-            border-radius: 4px;
-            transition: width 0.1s linear;
-        }
-
-        /* ── Stats ── */
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
-            margin: 24px 0 28px;
-        }
-
-        .stats-item {
-            background: #141414;
-            border-radius: 14px;
-            padding: 16px 8px;
-            text-align: center;
-            border: 1px solid #262626;
-        }
-
-        .stats-value {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: #f5f3f0;
-            line-height: 1.2;
-        }
-
-        .stats-label {
-            font-size: 0.8rem;
-            color: #8a8884;
-            font-weight: 500;
+            font-size: 18px;
+            font-weight: 700;
+            box-shadow: 0 0 25px rgba(0, 191, 255, 0.4);
+            transition: all 0.3s ease;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-top: 2px;
         }
 
-        /* ── Features ── */
-        .features {
-            background: #141414;
-            border-radius: 20px;
-            padding: 24px 24px 20px;
-            border: 1px solid #262626;
-            margin-bottom: 24px;
+        .btn-join:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 35px rgba(0, 191, 255, 0.6);
         }
 
-        .features-rating {
-            text-align: center;
-            font-size: 0.95rem;
+        /* Footers */
+        .safe-footer {
+            margin-top: 25px;
+            font-size: 11px;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        .dev-credit {
+            margin-top: 15px;
+            font-size: 11px;
+            color: #718096;
+        }
+
+        .dev-credit a {
+            color: #00f2fe;
+            text-decoration: none;
             font-weight: 600;
-            color: #f5c542;
-            margin-bottom: 18px;
-            letter-spacing: 0.3px;
-        }
-
-        .features-card {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .features-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 14px;
-        }
-
-        .features-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #e63946;
-            flex-shrink: 0;
-            margin-top: 7px;
-            box-shadow: 0 0 12px rgba(230, 57, 70, 0.4);
-        }
-
-        .features-item-title {
-            font-size: 1rem;
-            font-weight: 700;
-            color: #f5f3f0;
-            line-height: 1.3;
-        }
-
-        .features-item-desc {
-            font-size: 0.88rem;
-            color: #9a9894;
-            line-height: 1.4;
-        }
-
-        /* ── Sticky CTA ── */
-        .sticky-cta {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: calc(100% - 32px);
-            max-width: 680px;
-            z-index: 100;
-            padding: 0 4px;
-        }
-
-        .cta-btn-sticky {
-            width: 100%;
-            background: linear-gradient(135deg, #e63946, #c62833);
-            color: #fff;
-            box-shadow: 0 8px 40px rgba(230, 57, 70, 0.5);
-            padding: 16px 20px;
-            border-radius: 60px;
-            font-size: 1rem;
-            font-weight: 700;
-            gap: 10px;
-            border: none;
-            transition: all 0.25s ease;
-        }
-
-        .cta-btn-sticky:hover {
-            transform: translateY(-2px) scale(1.01);
-            box-shadow: 0 12px 48px rgba(230, 57, 70, 0.6);
-        }
-
-        .cta-btn-sticky:active {
-            transform: scale(0.97);
-        }
-
-        /* ── Animations ── */
-        .animate-fade-in {
-            animation: fadeIn 0.8s ease forwards;
-        }
-
-        .animate-float {
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(16px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* ── Responsive ── */
-        @media (max-width: 520px) {
-            .topbar {
-                font-size: 11px;
-                padding: 8px 14px;
-                gap: 8px;
-                border-radius: 40px;
-            }
-
-            .hero-avatar {
-                width: 110px;
-                height: 110px;
-            }
-
-            .hero-heading {
-                font-size: 2rem;
-            }
-
-            .hero-subtitle {
-                font-size: 0.95rem;
-            }
-
-            .cta-btn {
-                padding: 14px 24px;
-                font-size: 0.9rem;
-            }
-
-            .stats {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 8px;
-            }
-
-            .stats-value {
-                font-size: 1.2rem;
-            }
-
-            .features {
-                padding: 18px 16px 16px;
-            }
-
-            .sticky-cta {
-                bottom: 12px;
-                width: calc(100% - 16px);
-            }
-
-            .cta-btn-sticky {
-                padding: 14px 16px;
-                font-size: 0.9rem;
-            }
-        }
-
-        @media (max-width: 380px) {
-            .hero-heading {
-                font-size: 1.6rem;
-            }
-            .stats {
-                grid-template-columns: 1fr 1fr 1fr;
-                gap: 6px;
-            }
-            .stats-item {
-                padding: 12px 4px;
-            }
-            .stats-value {
-                font-size: 1rem;
-            }
-            .stats-label {
-                font-size: 0.65rem;
-            }
         }
     </style>
 </head>
 <body>
 
-    <div class="page">
+    <div class="neon-sphere"></div>
+    <div class="neon-sphere-2"></div>
 
-        <!-- ═══ TOPBAR ═══ -->
-        <header class="topbar">
-            <span class="topbar-dot" aria-hidden="true"></span>
-            <span class="topbar-text">
-                ADS SETUP BY
-                <a href="https://t.me/Amit_K_Loot" target="_blank" rel="noopener noreferrer" class="topbar-link">
-                    @AmitAdsAgency
-                </a>
-            </span>
-            <span class="topbar-dot" aria-hidden="true"></span>
-        </header>
+    <div class="wrapper">
+        <!-- Your Added Logo -->
+        <div class="logo-container">
+            <img src="https://i.postimg.cc/TPn1kyZ3/IMG-20260701-164216-713.jpg" alt="Club Logo">
+        </div>
+        
+        <h1>Official Prediction Club</h1>
+        <div class="tagline">✦ Premium Analytics & Trends ✦</div>
 
-        <!-- ═══ MAIN ═══ -->
-        <main class="page-main">
-
-            <!-- Hero -->
-            <section class="hero">
-                <div class="hero-avatar animate-float">
-                    <img
-                    src="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7f55c70f-4de1-479e-a0c6-20ccf1f1baa5/id-preview-b97589ee--b9c1ce76-2a65-49f6-9a1a-7715656e4f9a.lovable.app-1782722782135.png"
-                    alt="Amit Ads Agency"
-                    width="512"
-                    height="512"
-                    loading="eager"
-                    class="hero-avatar-img"
-                    />
-                </div>
-
-                <span class="hero-badge animate-fade-in">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hero-badge-icon" aria-hidden="true">
-                        <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" />
-                        <path d="m21.854 2.147-10.94 10.939" />
-                    </svg>
-                    TELEGRAM CHANNEL
-                </span>
-
-                <h1 class="hero-heading animate-fade-in">
-                    <span class="hero-heading-line hero-heading-black">HACKING</span>
-                    <span class="hero-heading-line hero-heading-red">PREDICTION</span>
-                </h1>
-
-                <p class="hero-subtitle animate-fade-in">
-                    Join the movement. Exclusive content, real talk, and a community that stays connected.
-                </p>
-
-                <a href="https://t.me/+IR4iyQw1aSpiOTBl" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-primary animate-fade-in">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cta-btn-icon" aria-hidden="true">
-                        <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" />
-                        <path d="m21.854 2.147-10.94 10.939" />
-                    </svg>
-                    <span class="cta-btn-text">JOIN TELEGRAM NOW</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cta-btn-icon" aria-hidden="true">
-                        <path d="M5 12h14" />
-                        <path d="m12 5 7 7-7 7" />
-                    </svg>
-                </a>
-            </section>
-
-            <!-- Countdown -->
-            <div class="countdown animate-fade-in">
-                <div class="countdown-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <line x1="10" x2="14" y1="2" y2="2" />
-                        <line x1="12" x2="15" y1="14" y2="11" />
-                        <circle cx="12" cy="14" r="8" />
-                    </svg>
-                </div>
-                <div class="countdown-body">
-                    <p class="countdown-text">Opening your invite in 1 second</p>
-                    <div class="countdown-bar">
-                        <div class="countdown-bar-fill" style="width:0%"></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Stats -->
-            <section class="stats animate-fade-in" aria-label="Channel stats">
-                <div class="stats-item">
-                    <div class="stats-value">10K+</div>
-                    <div class="stats-label">Members</div>
-                </div>
-                <div class="stats-item">
-                    <div class="stats-value">Daily</div>
-                    <div class="stats-label">Updates</div>
-                </div>
-                <div class="stats-item">
-                    <div class="stats-value">Free</div>
-                    <div class="stats-label">Forever</div>
-                </div>
-            </section>
-
-            <!-- Features -->
-            <section class="features animate-fade-in">
-                <p class="features-rating">★ Channel Rating 4.99 / 5</p>
-                <div class="features-card">
-                    <div class="features-item">
-                        <div class="features-dot" aria-hidden="true"></div>
-                        <div>
-                            <h3 class="features-item-title">Free Gift Codes</h3>
-                            <p class="features-item-desc">Weekly drops for active members.</p>
-                        </div>
-                    </div>
-                    <div class="features-item">
-                        <div class="features-dot" aria-hidden="true"></div>
-                        <div>
-                            <h3 class="features-item-title">Live Sessions</h3>
-                            <p class="features-item-desc">Real-time predictions and Q&amp;A.</p>
-                        </div>
-                    </div>
-                    <div class="features-item">
-                        <div class="features-dot" aria-hidden="true"></div>
-                        <div>
-                            <h3 class="features-item-title">24/7 Support</h3>
-                            <p class="features-item-desc">Community and admin help anytime.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-        </main>
-
-        <!-- ═══ STICKY CTA ═══ -->
-        <div class="sticky-cta">
-            <a href="https://t.me/+IR4iyQw1aSpiOTBl" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-sticky">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cta-btn-icon" aria-hidden="true">
-                    <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" />
-                    <path d="m21.854 2.147-10.94 10.939" />
-                </svg>
-                <span class="cta-btn-text">JOIN HACKING PREDICTION NOW</span>
-            </a>
+        <!-- Color Strips (Highly Attractive for Color Game Users) -->
+        <div class="game-preview">
+            <div class="color-pill pill-red">Red</div>
+            <div class="color-pill pill-violet">Violet</div>
+            <div class="color-pill pill-green">Green</div>
         </div>
 
+        <!-- Bullet Points -->
+        <div class="features-list">
+            <div class="feature-item"><span>✓</span> 90%+ High Accuracy Systems</div>
+            <div class="feature-item"><span>✓</span> 24/7 Live Pattern Forecasts</div>
+            <div class="feature-item"><span>✓</span> Trusted by 50,000+ Active Members</div>
+        </div>
+
+        <!-- Telegram Button -->
+        <a href="https://t.me/+IR4iyQw1aSpiOTBl" class="btn-join" target="_blank">
+            Join Telegram Channel 🚀
+        </a>
+
+        <!-- Meta Safe Footer & Credits -->
+        <p class="safe-footer">Disclaimer: This community is strictly for analytical, pattern tracking, and educational purposes based on probability skill sets.</p>
+        
+        <p class="dev-credit">
+            Ads Setup By: <a href="http://t.me/Amit_K_Loot" target="_blank">@Amit_K_Loot</a>
+        </p>
     </div>
-
-    <!-- ─── Countdown animation ─── -->
-    <script>
-        (function() {
-            const fill = document.querySelector('.countdown-bar-fill');
-            const text = document.querySelector('.countdown-text');
-            if (!fill || !text) return;
-
-            let percent = 0;
-            const duration = 1000; // 1 second
-            const startTime = performance.now();
-
-            function tick(now) {
-                const elapsed = now - startTime;
-                percent = Math.min((elapsed / duration) * 100, 100);
-                fill.style.width = percent + '%';
-
-                if (percent < 100) {
-                    requestAnimationFrame(tick);
-                } else {
-                    text.textContent = '✓ Invite ready — join now!';
-                    fill.style.background = 'linear-gradient(90deg, #2ecc71, #27ae60)';
-                }
-            }
-
-            requestAnimationFrame(tick);
-        })();
-    </script>
 
 </body>
 </html>
