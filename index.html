@@ -6,6 +6,27 @@
     <title>Official Prediction Club</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- ========================================== -->
+    <!-- YOUR META PIXEL CODE (ADDED & CONFIGURED) -->
+    <!-- ========================================== -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '895539323588292');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=895539323588292&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- ========================================== -->
+
     <style>
         * {
             margin: 0;
@@ -78,7 +99,7 @@
             background: #060713;
         }
 
-        /* Meta Safe Heading */
+        /* Heading */
         h1 {
             font-family: 'Orbitron', sans-serif;
             font-size: 26px;
@@ -149,7 +170,7 @@
 
         .feature-item span { color: #38ef7d; font-weight: bold; }
 
-        /* Powerful Telegram CTA */
+        /* Telegram CTA Button - Fix Safe Method */
         .btn-join {
             display: flex;
             align-items: center;
@@ -165,6 +186,9 @@
             box-shadow: 0 0 25px rgba(0, 191, 255, 0.4);
             transition: all 0.3s ease;
             text-transform: uppercase;
+            cursor: pointer;
+            border: none;
+            width: 100%;
         }
 
         .btn-join:hover {
@@ -199,7 +223,7 @@
     <div class="neon-sphere-2"></div>
 
     <div class="wrapper">
-        <!-- Your Added Logo -->
+        <!-- Logo -->
         <div class="logo-container">
             <img src="https://i.postimg.cc/TPn1kyZ3/IMG-20260701-164216-713.jpg" alt="Club Logo">
         </div>
@@ -207,7 +231,7 @@
         <h1>Official Prediction Club</h1>
         <div class="tagline">✦ Premium Analytics & Trends ✦</div>
 
-        <!-- Color Strips (Highly Attractive for Color Game Users) -->
+        <!-- Color Strips -->
         <div class="game-preview">
             <div class="color-pill pill-red">Red</div>
             <div class="color-pill pill-violet">Violet</div>
@@ -221,9 +245,9 @@
             <div class="feature-item"><span>✓</span> Trusted by 50,000+ Active Members</div>
         </div>
 
-        <!-- Telegram Button -->
-        <a href="https://t.me/+IR4iyQw1aSpiOTBl" class="btn-join" target="_blank">
-            Join Telegram Channel 🚀
+        <!-- 100% Tracking Enabled Button -->
+        <a href="https://t.me/+IR4iyQw1aSpiOTBl" class="btn-join" target="_blank" onclick="trackLeadEvent()">
+            JOIN TELEGRAM CHANNEL 🚀
         </a>
 
         <!-- Meta Safe Footer & Credits -->
@@ -233,6 +257,19 @@
             Ads Setup By: <a href="http://t.me/Amit_K_Loot" target="_blank">@Amit_K_Loot</a>
         </p>
     </div>
+
+    <!-- ========================================== -->
+    <!-- LEAD EVENT TRACKING SCRIPT -->
+    <!-- ========================================== -->
+    <script>
+    function trackLeadEvent() {
+        if (typeof fbq !== 'undefined') {
+            fbq('track', 'Lead'); 
+        }
+        return true;
+    }
+    </script>
+    <!-- ========================================== -->
 
 </body>
 </html>
